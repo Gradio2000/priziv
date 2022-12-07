@@ -1,0 +1,923 @@
+.resempl{
+    background-color: #e8e8e8;
+}
+
+.errorMsg {
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*top: 40px;*/
+    /*width: 200px;*/
+    color: red;
+    font-size: 12px;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-stretch: normal;
+    src: url(https://fonts.gstatic.com/s/opensans/v27/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0B4gaVc.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: normal;
+    src: url(https://fonts.gstatic.com/s/opensans/v27/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVc.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-stretch: normal;
+    src: url(https://fonts.gstatic.com/s/opensans/v27/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsgH1x4gaVc.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Open Sans Condensed';
+    font-style: normal;
+    font-weight: 300;
+    src: url(https://fonts.gstatic.com/s/opensanscondensed/v15/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff1GhDuXMQg.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Open Sans Condensed';
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://fonts.gstatic.com/s/opensanscondensed/v15/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff0GmDuXMQg.ttf) format('truetype');
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'open sans', helvetica, arial, sans, serif;
+    background: url(https://farm8.staticflickr.com/7064/6858179818_5d652f531c_h.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.log-form {
+    width: 40%;
+    min-width: 320px;
+    max-width: 475px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 40em) {
+    .log-form {
+        width: 95%;
+        position: relative;
+        margin: 2.5% auto 0 auto;
+        left: 0;
+        -webkit-transform: translate(0%, 0%);
+        -moz-transform: translate(0%, 0%);
+        -o-transform: translate(0%, 0%);
+        -ms-transform: translate(0%, 0%);
+        transform: translate(0%, 0%);
+    }
+}
+.log-form form {
+    display: block;
+    width: 100%;
+    padding: 2em;
+}
+.log-form h2 {
+    color: #5d5d5d;
+    font-family: 'open sans condensed', serif;
+    font-size: 1.35em;
+    display: block;
+    background: #2a2a2a;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 0.75em 1em 0.75em 1.5em;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05);
+    border: 1px solid #1d1d1d;
+    margin: 0;
+    font-weight: 200;
+}
+.log-form input {
+    display: block;
+    /*margin: auto auto;*/
+    width: 100%;
+    /*margin-bottom: 2em;*/
+    margin-top: 2em;
+    border: none;
+    border-bottom: 1px solid #eaeaea;
+    padding: 0.5em 0 1.25em;
+    color: #757575;
+}
+.log-form input:focus {
+    outline: none;
+}
+.log-form .btn {
+    display: inline-block;
+    margin-top: 2em;
+    background: #1fb5bf;
+    border: 1px solid #1ba0a9;
+    padding: 0.5em 2em;
+    color: white;
+    margin-right: 0.5em;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.my-modal input {
+    display: block;
+    /*margin: auto auto;*/
+    width: 100%;
+    /*margin-bottom: 2em;*/
+    margin-top: 2em;
+    border: none;
+    border-bottom: 1px solid #eaeaea;
+    /*padding: 0.5em 0 1.25em;*/
+    color: #757575;
+}
+.my-modal input:focus {
+    outline: none;
+}
+.minibuttons{
+    margin-top: inherit;
+}
+.minibtn{
+    background: #878686;
+    border: 1px solid #525151;
+    color: white;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    height: 30px;
+}
+
+.selected{
+    background: #b6b6b6;
+    border: 1px solid #525151;
+    color: white;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    height: 30px;
+}
+
+.right{
+    background: #1fb5bf;
+    border: 1px solid #1ba0a9;
+    color: white;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    height: 30px;
+}
+
+.minibtn .false{
+    background: #dc4242;
+    border: 1px solid #d00909;
+    color: white;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    height: 30px;
+}
+
+.skipped{
+    background: #e8d23f;
+    border: 1px solid #d5c13a;
+    color: white;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    height: 30px;
+}
+
+.btn {
+    width: auto;
+    height: 31px;
+    display: inline-block;
+    margin-top: 2em;
+    background: #1fb5bf;
+    border: 1px solid #1ba0a9;
+    padding: 0.5em 2em;
+    color: white;
+    margin-right: 0.5em;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.btncancel {
+    display: inline-block;
+    margin-top: 2em;
+    background: #e85b5b;
+    border: 1px solid #c15e5e;
+    padding: 0.5em 2em;
+    color: white;
+    margin-right: 0.5em;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+
+.btndel{
+    display: none;
+}
+
+.buttonch {
+    display: inline-block;
+    margin-top: 2em;
+    background: #e8d23f;
+    border: 1px solid #d5c13a;
+    padding: 0.5em 2em;
+    color: white;
+    margin-right: 0.5em;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.btnch{
+    display: none;
+}
+
+.btn:hover {
+    background: #23cad5;
+}
+
+.minibtn:hover {
+    background: #b6b6b6;
+}
+
+.right:hover {
+    background: #23cad5;
+}
+
+.skipped:hover {
+    background: #fce345;
+}
+
+
+.btncancel:hover {
+    background: #e79696;
+}
+
+.buttonch:hover {
+    background: #e7dc93;
+}
+
+.buttonch:active{
+    background: #e8d23f;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+    background: #1fb5bf;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.minibtn:active {
+    background: #878686;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.right:active {
+    background: #1fb5bf;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.skipped:active {
+    background: #e8d23f;
+    box-shadow: inset 0 1px 1px #d5c13a;
+}
+
+.btncancel:active {
+    background: #dc4242;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.log-form .btn:hover {
+    background: #23cad5;
+}
+
+.log-form .btncancel:hover {
+    background: #dc4242;
+}
+
+.btn:active {
+    background: #1fb5bf;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+
+.btncancel:active {
+    background: #dc4242;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+
+.log-form .btn:active {
+    background: #1fb5bf;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.log-form .btncancel:active {
+    background: #dc4242;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.log-form .btn:focus {
+    outline: none;
+}
+.log-form .forgot {
+    color: #33d3de;
+    line-height: 2.5em;
+    position: relative;
+    top: 2.5em;
+    text-decoration: none;
+    font-size: 0.75em;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.rememberPas {
+    color: #33d3de;
+    line-height: 0.5em;
+    position: relative;
+    top: 2.5em;
+    text-decoration: none;
+    font-size: 0.75em;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.rememberPas:hover{
+    color: #1ba0a9;
+}
+
+.log-form .forgot:hover {
+    color: #1ba0a9;
+}
+
+.quesTable{
+    table-layout: auto;
+}
+
+.quesTable td{
+    width: auto;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+table td {
+    width: 100%;
+}
+
+table {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: small;
+}
+
+table td, table th {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table th {
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #1fb5bf;
+    color: white;
+    font-weight: normal;
+}
+
+table  b {
+    writing-mode: vertical-rl; /* поворачивает всю таблицу, но не содержимое отдельной ячейки, поэтому нужен вложенный элемент */
+    transform: scale(-1);
+    font-weight: normal;
+}
+
+
+/* стилизация содержимого страницы */
+body {
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-weight: 400;
+    /*line-height: 1.5;*/
+    color: #292b2c;
+    background-color: #fff;
+}
+
+/* свойства модального окна по умолчанию */
+.modal {
+    position: fixed; /* фиксированное положение */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5); /* цвет фона */
+    z-index: 1050;
+    opacity: 0; /* по умолчанию модальное окно прозрачно */
+    -webkit-transition: opacity 200ms ease-in;
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in; /* анимация перехода */
+    pointer-events: none; /* элемент невидим для событий мыши */
+    margin: 0;
+    padding: 0;
+}
+/* при отображении модального окно */
+.modal:target {
+    opacity: 1; /* делаем окно видимым */
+    pointer-events: auto; /* элемент видим для событий мыши */
+    overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
+/* ширина модального окна и его отступы от экрана */
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 10px;
+}
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 500px;
+        margin: 30px auto; /* для отображения модального окна по центру */
+    }
+}
+/* свойства для блока, содержащего контент модального окна */
+.modal-content {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+}
+@media (min-width: 768px) {
+    .modal-content {
+        -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+        box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    }
+}
+/* свойства для заголовка модального окна */
+.modal-header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #eceeef;
+}
+.modal-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+/* свойства для кнопки "Закрыть" */
+.close {
+    float: right;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    text-decoration: none;
+}
+/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+.close:focus, .close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .75;
+}
+
+.edit {
+    float: right;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    text-decoration: none;
+    margin: 2px;
+    padding: 2px;
+}
+/* свойства для кнопки "edit" при нахождении её в фокусе или наведении */
+.edit:focus, .edit:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .75;
+}
+
+
+/* свойства для блока, содержащего основное содержимое окна */
+.modal-body {
+    position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 15px;
+    overflow: auto;
+}
+
+.tblsht {
+    text-align: left;
+}
+
+ .myinput {
+     width: 50%;
+     height: 10px;
+     border: none;
+     border-bottom: 1px solid red;
+}
+
+.myinput{
+    /*display: block;*/
+    /*margin: auto auto;*/
+    width: 100%;
+    height: auto;
+    /*margin-bottom: 2em;*/
+    margin-top: 2em;
+    border: none;
+    border-bottom: 1px solid #eaeaea;
+    padding: 0.5em 0 1.25em;
+    color: #757575;
+}
+
+.myinput-forKanban {
+    height: auto;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #eaeaea;
+    color: #494949;
+    margin-top: 0;
+    font-family: inherit;
+}
+
+.mytextarea-forKanban {
+    height: 53px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #eaeaea;
+    color: #494949;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.mylabel-forkanban{
+    color: #999;
+    font: 12px/1.5'Helvetica Neue','Helvetica',Arial,sans-serif;
+    margin-top: 10px;
+    display: block;
+}
+
+.membersBlock{
+    margin-left: 0; /* Отступ слева в браузере IE и Opera */
+    padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+}
+
+.member{
+    list-style-type: none;
+    color: #494949;
+}
+
+.select-css {
+    /*display: block;*/
+    /*font-size: 16px;*/
+    font-family: sans-serif;
+    /*font-weight: 700;*/
+    color: #444;
+    line-height: 1.3;
+    padding: .6em 1.4em .5em .8em; width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    border: 1px solid #aaa;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: .5em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'), linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: .65em auto, 100%;
+}
+.select-css::-ms-expand { display: none; }
+.select-css:hover { border-color: #888; }
+.select-css:focus { border-color: #aaa;
+    /*box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);*/
+    box-shadow: 0 0 0 3px -moz-mac-focusring;
+    color: #222;
+    outline: none;
+}
+.select-css option { font-weight:normal; }
+*[dir="rtl"] .select-css, :root:lang(ar) .select-css, :root:lang(iw) .select-css {
+    background-position: left .7em top 50%, 0 0;
+    padding: .6em .8em .5em 1.4em;
+}
+
+.sidenav {
+    height: 100%;
+    width: 220px;
+    position: fixed;
+    z-index: 1;
+    top: 72px;
+    /*left: 0;*/
+    background-color: #1fb5bf;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    /*padding: 6px 8px 6px 16px;*/
+    text-decoration: none;
+    /*font-size: 25px;*/
+    color: #393939;
+    display: block;
+    padding-left: 10px;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 220px; /* Same as the width of the sidenav */
+    padding-left: 5px;
+    margin-top: 72px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.my-box {
+    margin-top: 40px;
+    -webkit-box-shadow: 7px 10px 11px -4px rgba(34, 60, 80, 0.18);
+    -moz-box-shadow: 7px 10px 11px -4px rgba(34, 60, 80, 0.18);
+    box-shadow: 7px 10px 11px -4px rgba(34, 60, 80, 0.18);
+    background-color: #f8f6f6;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.my-box h2 {
+    color: #5d5d5d;
+    font-family: 'open sans condensed', serif;
+    font-size: 1.35em;
+    display: block;
+    background: #2a2a2a;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 0.75em 1em 0.75em 1.5em;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05);
+    border: 1px solid #1d1d1d;
+    margin: 0;
+    font-weight: 200;
+}
+.my-box input {
+    display: block;
+    /*margin: auto auto;*/
+    width: 100%;
+    /*margin-bottom: 2em;*/
+    margin-top: 2em;
+    border: none;
+    border-bottom: 1px solid #eaeaea;
+    padding: 0.5em 0 1.25em;
+    color: #757575;
+}
+.my-box input:focus {
+    outline: none;
+}
+
+body {
+    display: contents;
+    margin: 0;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.pagination {
+    display: inline-block;
+    font-size: small;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+
+.pagination a.active {
+    background-color: #1fb5bf;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+.arch {
+    font-size: smaller;
+    text-decoration: line-through;
+    color: grey;
+}
+
+.punkt:hover{
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.closex{
+    position: absolute;
+    z-index: 2;
+    right: 10px;
+    top: 1px;
+    opacity: 0;
+    color: #8f8f8f;
+}
+
+.closex:hover{
+    cursor: pointer;
+    color: black;
+}
+
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container-form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+
+.span-shadow {
+    background: #1fb5bf
+}
+.span-shadow:hover {
+    box-shadow: 0 0 0 2px #1fb5bf inset, 0 0 0 4px white inset;
+}
+
+
+.span-shadow-yellow {
+    background: #faff5b
+}
+.span-shadow-yellow:hover {
+    box-shadow: 0 0 0 2px #faff5b inset, 0 0 0 4px white inset;
+}
+
+.span-shadow-green {
+    background: #76ff80
+}
+.span-shadow-green:hover {
+    box-shadow: 0 0 0 2px #76ff80 inset, 0 0 0 4px white inset;
+}
+
+.container {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: medium;
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+}
+.column {
+    flex-basis: 25%;
+    background: #f1f1f1;
+    min-height: 87vh;
+    /*padding: 5px;*/
+    border-radius: 10px;
+}
+.column h1 {
+    text-align: center;
+    font-size: 22px;
+}
+.list-group-item {
+    z-index: 1;
+    position: relative;
+    background: #fff;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: move;
+}
+
+.list-group-item:hover .closex{
+    opacity: 1;
+}
+
+.started{
+    background: #fff;
+}
+.continues{
+    background: #faff5b;
+}
+.finished{
+    background: #76ff80;
+}
+
+
+.collapsible {
+    background-color: #939393;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+.active, .collapsible:hover {
+    background-color: #737373;
+}
+
+.collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+
+.contain {
+    display: flex;
+}
+
+.member {
+    margin-left: 10px;
+    color: #494949;
+}
+
+.del{
+    color: white;
+    font-weight: 500;
+}
+
+.contain:hover .del{
+    color: black;
+    cursor: pointer;
+}
+
+.contain:hover .member{
+    font-weight: 500;
+}
